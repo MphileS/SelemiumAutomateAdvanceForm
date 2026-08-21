@@ -46,6 +46,7 @@ public class LoginTests extends base {
     @Test(dependsOnMethods ="selectStorageTest")
     public void selectColorTest() throws InterruptedException {
         practice.selectColor();
+        Thread.sleep(5000);
 
     }
 }

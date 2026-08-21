@@ -45,6 +45,6 @@ public void selectStorage()
 public void selectColor() throws InterruptedException {
     Select select = new Select(selectColorField);
     Thread.sleep(5000);
-    select.selectByVisibleText("Blue'");
+    select.selectByVisibleText("White'");
 }
 }
