@@ -20,6 +20,16 @@ public class Practice
     WebElement selectColorField ;
     @FindBy(id="quantity")
     WebElement quantityFiled ;
+    @FindBy(id="address")
+    WebElement addressField ;
+    @FindBy(id="inventory-next-btn")
+    WebElement inventoryField ;
+    @FindBy(id="shipping-express")
+    WebElement shippingOptionField ;
+    @FindBy (id="warranty-1yr")
+    WebElement warrantyField ;
+    @FindBy (id="discount-code")
+    WebElement discountField ;
 
     public Practice (WebDriver driver)
     {
@@ -52,5 +62,26 @@ public void selectColor() throws InterruptedException
 public void addQuantity(String quantity)
 {
     quantityFiled.sendKeys(quantity);
+}
+public void addAddress(String address)
+
+{
+addressField.sendKeys(address);
+}
+public void clickNextButton()
+{
+    inventoryField.click(); ;
+}
+public void selectShippingOption()
+{
+    shippingOptionField.click();
+}
+public void selectWarranty()
+{
+    warrantyField.click();
+}
+public  void addDiscount (String discount)
+{
+    discountField.sendKeys(discount);
 }
 }

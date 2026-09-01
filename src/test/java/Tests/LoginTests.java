@@ -49,8 +49,35 @@ public class LoginTests extends base {
         Thread.sleep(5000);
     }
     @Test(dependsOnMethods = "selectColorTest")
-    public void addQuantity()
+    public void addQuantityTest()
     {
         practice.addQuantity("2");
     }
+    @Test(dependsOnMethods = "addQuantityTest")
+    public void addAddressTest()
+    {
+        practice.addAddress("06 Polaris street ,Pioneer Valley");
+    }
+     @Test(dependsOnMethods = "addAddressTest")
+    public void clickNextButtonTest()
+    {
+        practice.clickNextButton();
+    }
+    @Test(dependsOnMethods = "clickNextButtonTest")
+    public void selectShippingOptionTest()
+    {
+        practice.selectShippingOption();
+    }
+    @Test(dependsOnMethods = "selectShippingOptionTest")
+    public void selectWarrantyOptionTest()
+    {
+        practice.selectWarranty();
+    }
+    @Test(dependsOnMethods = "selectWarrantyOptionTest")
+    public void addDiscountTest()
+    {
+        practice.addDiscount("SAVE10");
+    }
+
+
 }
