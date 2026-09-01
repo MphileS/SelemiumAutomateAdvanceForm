@@ -47,6 +47,10 @@ public class LoginTests extends base {
     public void selectColorTest() throws InterruptedException {
         practice.selectColor();
         Thread.sleep(5000);
-
+    }
+    @Test(dependsOnMethods = "selectColorTest")
+    public void addQuantity()
+    {
+        practice.addQuantity("2");
     }
 }

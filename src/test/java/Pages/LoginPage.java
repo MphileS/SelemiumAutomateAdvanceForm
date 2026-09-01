@@ -18,7 +18,8 @@ public class LoginPage {
     public LoginPage(WebDriver driver) {
         this.driver = driver;
     }
-    public void enterUsername(String username) {
+    public void enterUsername(String username)
+    {
         usernameField.sendKeys(username);
     }
     public void enterPassword(String password) {passwordField.sendKeys(password); }

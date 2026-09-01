@@ -18,7 +18,8 @@ public class Practice
     WebElement selectStorageField ;
     @FindBy(id="color")
     WebElement selectColorField ;
-
+    @FindBy(id="quantity")
+    WebElement quantityFiled ;
 
     public Practice (WebDriver driver)
     {
@@ -42,9 +43,14 @@ public void selectStorage()
 {
     selectStorageField.click();
 }
-public void selectColor() throws InterruptedException {
+public void selectColor() throws InterruptedException
+{
     Select select = new Select(selectColorField);
     Thread.sleep(5000);
-    select.selectByVisibleText("White'");
+    select.selectByVisibleText("Blue");
+}
+public void addQuantity(String quantity)
+{
+    quantityFiled.sendKeys(quantity);
 }
 }
