@@ -30,6 +30,14 @@ public class Practice
     WebElement warrantyField ;
     @FindBy (id="discount-code")
     WebElement discountField ;
+    @FindBy (id="apply-discount-btn")
+    WebElement applyDiscountField ;
+     @FindBy (id ="purchase-device-btn")
+     WebElement clickPurchaseButton ;
+     @FindBy (id="view-history-btn")
+     WebElement viewHistory;
+    @FindBy(xpath = "//*[starts-with(@id, 'view-invoice-')]")
+    WebElement viewInvoiceField ;
 
     public Practice (WebDriver driver)
     {
@@ -84,4 +92,20 @@ public  void addDiscount (String discount)
 {
     discountField.sendKeys(discount);
 }
+public void applyDiscount ()
+{
+    applyDiscountField.click();
+}
+    public void clickPurchaseButton ()
+    {
+       clickPurchaseButton.click();
+    }
+    public void viewInvoiceHistory ()
+    {
+        viewHistory.click();
+    }
+    public void viewInvoice ()
+    {
+ viewInvoiceField.click();
+    }
 }

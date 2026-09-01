@@ -78,6 +78,25 @@ public class LoginTests extends base {
     {
         practice.addDiscount("SAVE10");
     }
-
+    @Test(dependsOnMethods = "addDiscountTest")
+    public void applyDiscountTest()
+    {
+        practice.applyDiscount();
+    }
+    @Test(dependsOnMethods = "applyDiscountTest")
+    public void clickPurchaseButton()
+    {
+        practice.clickPurchaseButton();
+    }
+    @Test(dependsOnMethods = "clickPurchaseButton")
+    public void viewInvoiceHistoryTest() throws InterruptedException {
+        Thread.sleep(5000);
+        practice.viewInvoiceHistory();
+    }
+    @Test(dependsOnMethods = "viewInvoiceHistoryTest")
+    public void viewInvoiceTest()
+    {
+        practice.viewInvoice();
+    }
 
 }
